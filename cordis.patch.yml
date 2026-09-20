@@ -1,0 +1,6 @@
+# session-delete: permanent per-session deletion for the web GUI.
+# Host half mounts /api/session-delete/*; the client half adds a
+# settings-sidebar manager page (auto-composed from dsh.client.platform).
+- insert:
+    - id: session-delete-host
+      name: '@local/dsh-session-delete'

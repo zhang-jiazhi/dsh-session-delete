@@ -1,0 +1,25 @@
+{
+  "name": "@local/dsh-session-delete",
+  "version": "0.1.0",
+  "description": "Permanently delete DSH sessions (full content) — host delete routes plus a settings-page session manager.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-cordis-client-runner",
+        "@deepseek-ai/dsh-client-connection"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
